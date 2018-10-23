@@ -148,6 +148,7 @@ class Modal extends Component {
       showCloseIcon,
       closeIconSize,
       closeIconSvgPath,
+      closeIcon,
       animationDuration,
       container,
     } = this.props;
@@ -199,6 +200,7 @@ class Modal extends Component {
                   classes={classes}
                   classNames={classNames}
                   styles={styles}
+                  icon={ closeIcon }
                   closeIconSize={closeIconSize}
                   closeIconSvgPath={closeIconSvgPath}
                   onClickCloseIcon={this.handleClickCloseIcon}
@@ -213,6 +215,7 @@ class Modal extends Component {
 }
 
 Modal.propTypes = {
+  closeIcon: PropTypes.object,
   /**
    * Is the modal closable when user press esc key.
    */
@@ -300,6 +303,7 @@ Modal.defaultProps = {
   onEscKeyDown: null,
   onOverlayClick: null,
   showCloseIcon: true,
+  closeIcon: null,
   closeIconSize: 28,
   closeIconSvgPath: (
     <path d="M28.5 9.62L26.38 7.5 18 15.88 9.62 7.5 7.5 9.62 15.88 18 7.5 26.38l2.12 2.12L18 20.12l8.38 8.38 2.12-2.12L20.12 18z" />
