@@ -10,7 +10,7 @@ const CloseIcon = ({
   closeIconSize,
   closeIconSvgPath,
   onClickCloseIcon,
-}) => icon
+}) => !icon
   ? (
     <button
       className={cx(classes.closeButton, classNames.closeButton)}
